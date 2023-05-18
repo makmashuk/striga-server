@@ -1,0 +1,27 @@
+ Logs
+logs
+*.log
+
+# Dependency directories
+node_modules/
+
+# Environment variables
+.env
+
+# Build output
+dist/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.iml
+
+# Testing files
+coverage/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore npm debug log
+npm-debug.log*

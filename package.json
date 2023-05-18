@@ -1,0 +1,26 @@
+{
+  "name": "striga-wallet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "makmashuk",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "crypto-js": "^4.1.1",
+    "express": "^4.18.2",
+    "http-proxy": "^1.18.1",
+    "node-fetch": "^3.3.1",
+    "nodemon": "^2.0.22"
+  },
+  "devDependencies": {
+    "https-localhost": "^4.7.1"
+  }
+}
