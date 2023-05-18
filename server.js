@@ -3,12 +3,7 @@ const axios = require("axios");
 const crypto = require("crypto");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-// const corsOptions = {
-//   origin: "*",
-//   credentials: true, //access-control-allow-credentials:true
-//   optionSuccessStatus: 200,
-// };
-// Define the base URL for the Striga API
+
 //NOT RECOMMENDED !! USE ENV VALUE
 const API_BASE_URL = "https://www.sandbox.striga.com/api/v1";
 const APPLICATION_ID = "59e5a3ba-96f8-476a-9b76-c4e91626a95e";
@@ -45,7 +40,6 @@ const generateAuthorizationHeader = (req) => {
 app.all("/*", async (req, res) => {
   try {
     const apiUrl = API_BASE_URL + req.url;
-    console.log(res.body);
     const authorizationHeader = generateAuthorizationHeader(req);
     const response = await axios({
       url: apiUrl,
@@ -57,14 +51,12 @@ app.all("/*", async (req, res) => {
       },
       data: req.body,
     });
-    console.log(response);
     const responseData = {
       status: response?.status,
       data: response?.data,
     };
     res.send(responseData);
   } catch (error) {
-    console.log(error);
     res.send(error.response.data);
     res.end();
   }
